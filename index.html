@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indus Creative | Creative Video Marketing Agency (USA)</title>
+    <meta name="description" content="Indus Creative is a USA-based video marketing agency — we write, shoot, animate, and run the campaigns that get your videos actually watched, not just made.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Indus Creative | Creative Video Marketing Agency (USA)">
+    <meta property="og:description" content="We write, produce, and place video content that's built around a specific outcome: more views, more leads, more sales.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#81A8BA"/>
+                            <stop offset="100%" style="stop-color:#212C48"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Five rivers merging into one -->
+                    <path d="M8 6 Q12 14 14 20 Q16 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M14 4 Q16 12 17 20 Q18 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M20 3 Q20 12 20 20 Q20 28 20 34" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M26 4 Q24 12 23 20 Q22 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M32 6 Q28 14 26 20 Q24 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <!-- Confluence point -->
+                    <circle cx="20" cy="34" r="3" fill="url(#logoGrad)" opacity="0.8"/>
+                </svg>
+                <span class="logo-text">Indus <span class="logo-accent">Creative</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#insights" class="nav-link">Insights</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════ HERO ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll fade-in-up">
+                <span class="badge-dot"></span>
+                USA-Based Video Marketing Agency
+            </div>
+            <h1 class="hero-title animate-on-scroll fade-in-up">
+                Video that's built to <span class="gradient-text">perform</span>,<br>
+                not just look good on a reel.
+            </h1>
+            <p class="hero-subtitle animate-on-scroll fade-in-up">
+                Most agencies either make pretty videos or run paid campaigns; rarely both.<br>
+                We write, produce, and place video content built around a specific outcome:
+            </p>
+            <div class="hero-typing animate-on-scroll fade-in-up">
+                <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
+            </div>
+            <div class="hero-ctas animate-on-scroll fade-in-up">
+                <a href="#contact" class="btn btn-primary" id="cta-start-project">
+                    <span>Start Your Project</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#portfolio" class="btn btn-secondary" id="cta-see-work">
+                    <span>See Our Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </a>
+            </div>
+            <div class="hero-reels-container animate-on-scroll fade-in-up">
+                <div class="hero-reels-marquee">
+                    <div class="reels-track">
+                        <!-- Group 1 of Reels -->
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-man-holding-a-microphone-and-talking-41582-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Podcast Reel</span>
+                                <p class="reel-caption">"How to create <strong>detailed shots</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-young-woman-talking-on-a-video-call-42886-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Brand Story</span>
+                                <p class="reel-caption">"Started <strong>15 years ago</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-man-talking-on-a-podcast-show-41581-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">SaaS Ad</span>
+                                <p class="reel-caption">"Converted from a <strong>contractor</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-woman-smiling-and-talking-to-camera-42891-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">E-Com Ad</span>
+                                <p class="reel-caption">"Just watch and <strong>enjoy</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-young-man-presenting-a-product-on-camera-42887-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Product Motion</span>
+                                <p class="reel-caption">"Introducing <strong>Service M8</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-videographer-filming-a-model-41566-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Commercial</span>
+                                <p class="reel-caption">"Behind the <strong>scenes shoot</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-man-giving-an-interview-41580-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Founder Story</span>
+                                <p class="reel-caption">"Strategy before <strong>the camera rolls</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-woman-recording-a-vlog-42890-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">TikTok Ad</span>
+                                <p class="reel-caption">"Scale your <strong>video reach</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Group for Seamless 100% Infinite Loop -->
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-man-holding-a-microphone-and-talking-41582-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Podcast Reel</span>
+                                <p class="reel-caption">"How to create <strong>detailed shots</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-young-woman-talking-on-a-video-call-42886-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Brand Story</span>
+                                <p class="reel-caption">"Started <strong>15 years ago</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-man-talking-on-a-podcast-show-41581-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">SaaS Ad</span>
+                                <p class="reel-caption">"Converted from a <strong>contractor</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-woman-smiling-and-talking-to-camera-42891-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">E-Com Ad</span>
+                                <p class="reel-caption">"Just watch and <strong>enjoy</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-young-man-presenting-a-product-on-camera-42887-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Product Motion</span>
+                                <p class="reel-caption">"Introducing <strong>Service M8</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-videographer-filming-a-model-41566-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Commercial</span>
+                                <p class="reel-caption">"Behind the <strong>scenes shoot</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-man-giving-an-interview-41580-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">Founder Story</span>
+                                <p class="reel-caption">"Strategy before <strong>the camera rolls</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                        <div class="reel-card" aria-hidden="true">
+                            <video src="https://assets.mixkit.co/videos/preview/mixkit-woman-recording-a-vlog-42890-large.mp4" autoplay loop muted playsinline></video>
+                            <div class="reel-overlay">
+                                <span class="reel-badge">TikTok Ad</span>
+                                <p class="reel-caption">"Scale your <strong>video reach</strong>"</p>
+                                <div class="reel-play-icon">▶</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ RIVER DIVIDER ═══════════════════════════════ -->
+    <div class="river-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="url(#riverGrad1)" opacity="0.15"/>
+            <path d="M0,80 C240,20 480,100 720,40 C960,100 1200,20 1440,80 L1440,120 L0,120 Z" fill="url(#riverGrad1)" opacity="0.1"/>
+            <defs>
+                <linearGradient id="riverGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#81A8BA"/>
+                    <stop offset="50%" style="stop-color:#D1AB9B"/>
+                    <stop offset="100%" style="stop-color:#212C48"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ SERVICES ═══════════════════════════════════════════ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">Our Expertise</span>
+                <h2 class="section-title">What We <span class="gradient-text">Actually</span> Do</h2>
+                <p class="section-subtitle">We're not a generalist agency dabbling in video. Video is the whole business.</p>
+                
+                <div class="services-inline-stats">
+                    <div class="stat-inline">
+                        <span class="stat-number counter" data-target="150">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Videos Produced</span>
+                    </div>
+                    <span class="stat-dot">•</span>
+                    <div class="stat-inline">
+                        <span class="stat-number counter" data-target="50">0</span><span class="stat-suffix">M+</span>
+                        <span class="stat-label">Views Generated</span>
+                    </div>
+                    <span class="stat-dot">•</span>
+                    <div class="stat-inline">
+                        <span class="stat-number counter" data-target="98">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Client Retention</span>
+                    </div>
+                </div>
+            </div>
+            <div class="services-grid stagger-children">
+                <!-- Card 1: Video Production -->
+                <div class="service-card animate-on-scroll fade-in-up" id="service-production">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="10" width="30" height="22" rx="3" stroke="url(#sGrad1)" stroke-width="2.5"/>
+                            <path d="M34 17L44 11V31L34 25" stroke="url(#sGrad1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="19" cy="21" r="4" stroke="url(#sGrad1)" stroke-width="2"/>
+                            <defs><linearGradient id="sGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#81A8BA"/><stop offset="100%" stop-color="#212C48"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Video Production</h3>
+                    <p class="service-desc">Live-action and animated content, produced end to end — script to final cut.</p>
+                    <ul class="service-list">
+                        <li>Brand Films</li>
+                        <li>Explainer Videos</li>
+                        <li>Product Videos</li>
+                        <li>Social Content</li>
+                        <li>Commercials</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Explore Production Services
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <!-- Card 2: Animation & Motion Design -->
+                <div class="service-card animate-on-scroll fade-in-up" id="service-animation">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="url(#sGrad2)" stroke-width="2.5" stroke-dasharray="4 4"/>
+                            <path d="M16 20 Q20 10 24 20 Q28 30 32 20" stroke="url(#sGrad2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <path d="M16 28 Q20 18 24 28 Q28 38 32 28" stroke="url(#sGrad2)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+                            <defs><linearGradient id="sGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D1AB9B"/><stop offset="100%" stop-color="#81A8BA"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Animation & Motion Design</h3>
+                    <p class="service-desc">2D animation and motion graphics for the ideas that are hard to film.</p>
+                    <ul class="service-list">
+                        <li>2D Animation</li>
+                        <li>Motion Graphics</li>
+                        <li>Character Design</li>
+                        <li>Whiteboard & Explainer Animation</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        See Animation Work
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <!-- Card 3: Video Marketing & Paid Media -->
+                <div class="service-card animate-on-scroll fade-in-up" id="service-marketing">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 36 L14 26 L22 30 L30 16 L40 12" stroke="url(#sGrad3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="40" cy="12" r="3" fill="url(#sGrad3)"/>
+                            <path d="M36 12 L40 8 L44 12" stroke="url(#sGrad3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M8 40 H40" stroke="url(#sGrad3)" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+                            <defs><linearGradient id="sGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#212C48"/><stop offset="100%" stop-color="#81A8BA"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Video Marketing & Paid Media</h3>
+                    <p class="service-desc">Getting the video in front of the right people, then proving it worked.</p>
+                    <ul class="service-list">
+                        <li>YouTube Ads</li>
+                        <li>Meta & TikTok Video Ads</li>
+                        <li>Video SEO</li>
+                        <li>Distribution Strategy</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Grow With Video
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <!-- Card 4: Editing & Post-Production -->
+                <div class="service-card animate-on-scroll fade-in-up" id="service-editing">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="8" width="36" height="24" rx="2" stroke="url(#sGrad4)" stroke-width="2.5"/>
+                            <path d="M6 28 H42" stroke="url(#sGrad4)" stroke-width="2"/>
+                            <rect x="10" y="36" width="6" height="4" rx="1" fill="url(#sGrad4)" opacity="0.6"/>
+                            <rect x="18" y="36" width="10" height="4" rx="1" fill="url(#sGrad4)" opacity="0.8"/>
+                            <rect x="30" y="36" width="8" height="4" rx="1" fill="url(#sGrad4)" opacity="0.4"/>
+                            <path d="M14 16 L22 21 L14 26 Z" fill="url(#sGrad4)" opacity="0.6"/>
+                            <defs><linearGradient id="sGrad4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D1AB9B"/><stop offset="100%" stop-color="#212C48"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Editing & Post-Production</h3>
+                    <p class="service-desc">Turning raw footage into something people actually finish watching.</p>
+                    <ul class="service-list">
+                        <li>Editing & Color Grading</li>
+                        <li>Sound Design</li>
+                        <li>Captioning</li>
+                        <li>Repurposing for Social</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        See Editing Services
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ WHY US ═══════════════════════════════════════════ -->
+    <section class="why-us" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">The Difference</span>
+                <h2 class="section-title">Why businesses choose a <span class="gradient-text">video-first</span> agency</h2>
+                <p class="section-subtitle">Text and static ads still have a place, but attention increasingly goes to video first. That's the gap we fill.</p>
+            </div>
+            <div class="why-us-grid stagger-children">
+                <div class="why-card animate-on-scroll fade-in-up" id="why-strategy">
+                    <div class="why-card-number">01</div>
+                    <div class="why-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3 class="why-card-title">Distribution Before Shoot</h3>
+                    <p class="why-card-desc">We plan the distribution before we shoot. A video with no placement strategy is a video nobody sees.</p>
+                </div>
+                <div class="why-card animate-on-scroll fade-in-up" id="why-unified">
+                    <div class="why-card-number">02</div>
+                    <div class="why-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="why-card-title">Production + Media, One Team</h3>
+                    <p class="why-card-desc">No handoff gap between "here's your video" and "now go run it." Production and paid media under one roof.</p>
+                </div>
+                <div class="why-card animate-on-scroll fade-in-up" id="why-outcomes">
+                    <div class="why-card-number">03</div>
+                    <div class="why-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3 class="why-card-title">Outcomes, Not Vanity Metrics</h3>
+                    <p class="why-card-desc">We report on outcomes, not just view counts. Watch time, click-through, conversion — the numbers that actually matter.</p>
+                </div>
+                <div class="why-card animate-on-scroll fade-in-up" id="why-crew">
+                    <div class="why-card-number">04</div>
+                    <div class="why-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3 class="why-card-title">Fast, Senior Crews</h3>
+                    <p class="why-card-desc">You're working with people who've shot this before, not learning on your budget. Senior talent, every project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════ TESTIMONIALS ═══════════════════════════════════════════ -->
+    <section class="testimonials" id="insights">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">Client Stories</span>
+                <h2 class="section-title">What clients have <span class="gradient-text">said</span></h2>
+            </div>
+            <div class="testimonials-grid stagger-children">
+                <div class="testimonial-card animate-on-scroll fade-in-up" id="testimonial-1">
+                    <div class="testimonial-quote-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"They didn't just deliver a video — they delivered a video that was actually part of a plan to get views and leads."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MD</div>
+                        <div class="author-info">
+                            <span class="author-name">Marketing Director</span>
+                            <span class="author-title">SaaS Company</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+                <div class="testimonial-card testimonial-featured animate-on-scroll fade-in-up" id="testimonial-2">
+                    <div class="testimonial-quote-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Production quality was excellent, but the real value was how they thought about where the video would run before we even shot it."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FD</div>
+                        <div class="author-info">
+                            <span class="author-name">Founder</span>
+                            <span class="author-title">Tech Startup</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll fade-in-up" id="testimonial-3">
+                    <div class="testimonial-quote-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Every other agency treated video as an add-on. This team treats it as the strategy."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CM</div>
+                        <div class="author-info">
+                            <span class="author-name">CMO</span>
+                            <span class="author-title">Consumer Brand</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ PROCESS ═══════════════════════════════════════════ -->
+    <section class="process" id="portfolio">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">Our Process</span>
+                <h2 class="section-title">How a project <span class="gradient-text">usually goes</span></h2>
+            </div>
+            <div class="process-timeline stagger-children">
+                <div class="process-step animate-on-scroll fade-in-up" id="step-discovery">
+                    <div class="step-number-wrap">
+                        <span class="step-number">01</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Discovery</h3>
+                        <p class="step-desc">What's this video actually supposed to do for your business? We dig into your goals, audience, and competitive landscape.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll fade-in-up" id="step-strategy">
+                    <div class="step-number-wrap">
+                        <span class="step-number">02</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Strategy & Script</h3>
+                        <p class="step-desc">A plan for the message and where it'll run. We craft the narrative, write the script, and map out the distribution channels.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll fade-in-up" id="step-production">
+                    <div class="step-number-wrap">
+                        <span class="step-number">03</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Production</h3>
+                        <p class="step-desc">Filming or animation, built for the platforms it's headed to. Every frame is intentional, every cut is purposeful.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll fade-in-up" id="step-distribution">
+                    <div class="step-number-wrap">
+                        <span class="step-number">04</span>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Distribution & Optimization</h3>
+                        <p class="step-desc">Paid placement, tracking, and iteration based on real performance. We don't just deliver — we deploy and optimize.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ INDUSTRIES ═══════════════════════════════════════════ -->
+    <section class="industries">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">Verticals</span>
+                <h2 class="section-title">Industries We <span class="gradient-text">Work With</span></h2>
+            </div>
+            <div class="industries-grid animate-on-scroll fade-in-up">
+                <div class="industry-tag" id="industry-saas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    SaaS & Technology
+                </div>
+                <div class="industry-tag" id="industry-ecommerce">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    E-Commerce
+                </div>
+                <div class="industry-tag" id="industry-healthcare">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    Healthcare
+                </div>
+                <div class="industry-tag" id="industry-realestate">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                    Real Estate
+                </div>
+                <div class="industry-tag" id="industry-hospitality">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+                    Hospitality
+                </div>
+                <div class="industry-tag" id="industry-consumer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    Consumer Brands
+                </div>
+                <div class="industry-tag" id="industry-professional">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    Professional Services
+                </div>
+                <div class="industry-tag" id="industry-education">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    Education
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ CTA SECTION ═══════════════════════════════════════════ -->
+    <section class="cta-section" id="contact">
+        <div class="cta-bg-pattern"></div>
+        <div class="container">
+            <div class="cta-content animate-on-scroll fade-in-up">
+                <h2 class="cta-title">Ready to make video that actually <span class="gradient-text">does something</span>?</h2>
+                <p class="cta-subtitle">Whether you need one strong brand film or an always-on video ad engine, let's figure out what's actually going to move your numbers.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-large" id="cta-book-call">
+                        <span>Book a Discovery Call</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-large" id="cta-contact-us">
+                        <span>Contact Us</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                            <path d="M8 6 Q12 14 14 20 Q16 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M14 4 Q16 12 17 20 Q18 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M20 3 Q20 12 20 20 Q20 28 20 34" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <path d="M26 4 Q24 12 23 20 Q22 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M32 6 Q28 14 26 20 Q24 28 20 34" stroke="url(#logoGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <circle cx="20" cy="34" r="3" fill="url(#logoGrad)" opacity="0.8"/>
+                        </svg>
+                        <span class="logo-text">Indus <span class="logo-accent">Creative</span></span>
+                    </a>
+                    <p class="footer-desc">Five rivers of creativity, one powerful stream of results. We write, shoot, animate, and run the campaigns that get your videos actually watched.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter/X">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Video Production</a></li>
+                        <li><a href="#">Animation & Motion</a></li>
+                        <li><a href="#">Video Marketing</a></li>
+                        <li><a href="#">Editing & Post</a></li>
+                        <li><a href="#">Paid Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Get In Touch</h4>
+                    <ul class="footer-links footer-contact">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            <a href="mailto:hello@induscreative.com">hello@induscreative.com</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+1234567890">(123) 456-7890</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>United States</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Indus Creative. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

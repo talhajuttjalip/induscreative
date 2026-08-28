@@ -205,23 +205,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 }
 
 /* Logo */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  z-index: 1001;
-}
-.logo-icon { flex-shrink: 0; }
-.logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--c-navy);
-}
-.logo-accent {
-  color: var(--c-teal);
-}
+
 
 /* Nav links */
 .nav-links {

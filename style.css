@@ -829,7 +829,82 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
   border-color: var(--c-teal);
   box-shadow: 0 16px 36px rgba(33, 44, 72, 0.07);
 }
-
+        .page-hero {
+            position: relative;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(209,171,155,0.05) 0%, rgba(129,168,186,0.1) 100%);
+            overflow: hidden;
+        }
+        .pillar-number-bg {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgba(129, 168, 186, 0.18);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            display: block;
+            letter-spacing: -0.02em;
+        }
+        .pillar-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--c-navy);
+            margin-bottom: 1rem;
+            font-family: var(--font-heading);
+        }
+        .pillar-card {
+            padding: 2.5rem;
+            background: #ffffff;
+            border: 1px solid rgba(207, 205, 201, 0.7);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(33, 44, 72, 0.03);
+        }
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--c-teal);
+            box-shadow: 0 20px 45px rgba(33, 44, 72, 0.08);
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .pillar-desc {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .pillar-services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex: 1;
+        }
+        .pillar-service-tag {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 60px;
+            background: rgba(129, 168, 186, 0.08);
+            border: 1px solid rgba(129, 168, 186, 0.2);
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--c-navy);
+        }
+        @media (max-width: 768px) {
+            .pillars-grid { grid-template-columns: 1fr; }
+            .pillar-number-bg { font-size: 3.5rem; }
+        }
 .why-card-number {
   font-family: var(--font-heading);
   font-size: 2.75rem;

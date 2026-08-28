@@ -1147,7 +1147,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
   gap: 3.5rem;
   margin-bottom: 3.5rem;
 }
-.footer-brand .nav-logo { margin-bottom: 1.25rem; }
+.footer-brand .nav-logo { margin-bottom: 1.25rem; width: 44% ; }
 .footer-brand .logo-text { color: #FFFFFF; }
 .footer-brand .logo-accent { color: var(--c-sand); }
 .footer-desc {

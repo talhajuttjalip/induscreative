@@ -302,4 +302,60 @@ document.addEventListener('DOMContentLoaded', () => {
         initParticles();
         animateParticles();
     }
+
+    // 11. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            // Close all other FAQs
+            faqItems.forEach(other => other.classList.remove('active'));
+            // Toggle current
+            if (!isActive) item.classList.add('active');
+        });
+    });
+
+    // 12. Portfolio Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            portfolioCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = '';
+                    card.removeAttribute('data-visible');
+                } else {
+                    card.style.display = 'none';
+                    card.setAttribute('data-visible', 'false');
+                }
+            });
+        });
+    });
+
+    // 13. Contact Form Validation
+    const contactForm = document.querySelector('#contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Basic validation
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            let valid = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--c-sand)';
+                    valid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            if (valid) {
+                alert('Thank you! We\'ll be in touch within one business day.');
+                contactForm.reset();
+            }
+        });
+    }
 });

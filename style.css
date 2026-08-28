@@ -222,9 +222,6 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 .logo-accent {
   color: var(--c-teal);
 }
-.logo-container {
-   width: 50%;
-}
 /* Nav links */
 .nav-links {
   display: flex;

@@ -777,7 +777,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 .hero-content {
   position: relative;
   z-index: 10;
-  max-width: 860px;
+  max-width: 950px;
   text-align: center;
 }
 

@@ -12,10 +12,10 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Brand Palette Provided by User */
-  --c-navy: #212C48;
-  --c-teal: #81A8BA;
-  --c-sand: #D1AB9B;
-  --c-pebble: #CFCDC9;
+  --c-navy: #1B4965;
+  --c-teal: #6192A8;
+  --c-sand: #A3BFCC;
+  --c-pebble: #D1AB9B;
 
   /* Light Theme Backgrounds (Sunlit Stream Surface) */
   --bg-primary: #F8FAFC;

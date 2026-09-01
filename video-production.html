@@ -50,51 +50,274 @@
             </button>
         </div>
     </nav>
-    <!-- ═══════════════════════════════════════════ PROCESS ═══════════════════════════════════════════ -->
-    <section class="process" id="portfolio">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-orb"></div>
+        <div class="page-hero-orb"></div>
+        <div class="container animate-on-scroll fade-in-up">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Production & Animation
+            </div>
+            <h1>Content people watch to the end, not scroll past</h1>
+            <p class="hero-subtitle">We run the full pipeline — script, storyboard, shoot or animate, edit, and deliver cut for every platform it needs to run on.</p>
+            <div class="hero-ctas">
+                <a href="contact.html" class="btn btn-primary">
+                    <span>Start a Project</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="services.html" class="btn btn-secondary">
+                    <span>View All Services</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section style="padding-top: 0; padding-bottom: 4rem;">
+        <div class="container animate-on-scroll fade-in-up">
+            <div class="highlight-strip">
+                <div class="highlight-strip-stat">
+                    <span class="highlight-strip-num">150+</span>
+                    <span class="highlight-strip-label">Videos Produced</span>
+                </div>
+                <div class="highlight-strip-stat">
+                    <span class="highlight-strip-num">50M+</span>
+                    <span class="highlight-strip-label">Views Generated</span>
+                </div>
+                <div class="highlight-strip-stat">
+                    <span class="highlight-strip-num">98%</span>
+                    <span class="highlight-strip-label">Client Retention</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE MAKE -->
+    <section class="content-section">
         <div class="container">
             <div class="section-header animate-on-scroll fade-in-up">
-                <span class="section-tag">Our Process</span>
-                <h2 class="section-title">How a project <span class="gradient-text">usually goes</span></h2>
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">What we make</h2>
             </div>
-            <div class="process-timeline stagger-children">
-                <div class="process-step animate-on-scroll fade-in-up" id="step-discovery">
+            
+            <div class="service-tabs animate-on-scroll fade-in-up">
+                <button class="service-tab active">All Services</button>
+                <button class="service-tab">2D Animation</button>
+                <button class="service-tab">Brand Films</button>
+                <button class="service-tab">Editing & Post</button>
+            </div>
+            
+            <div class="service-panel stagger-children">
+                <!-- Card 1 -->
+                <div class="service-panel-card animate-on-scroll fade-in-up">
+                    <div class="service-panel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-panel-title">2D Animation</h3>
+                    <p class="service-panel-desc">For explaining things that are hard to film. Built from scratch — scripting, storyboarding, illustration, motion, and sound.</p>
+                    <div class="service-panel-tags">
+                        <span class="service-panel-tag">Explainer Videos</span>
+                        <span class="service-panel-tag">Product Animation</span>
+                        <span class="service-panel-tag">Brand Story</span>
+                        <span class="service-panel-tag">Whiteboard</span>
+                        <span class="service-panel-tag">Lottie Animation</span>
+                        <span class="service-panel-tag">Corporate & Educational</span>
+                    </div>
+                    <a href="contact.html" class="service-panel-link">→ Start an Animation Project</a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-panel-card animate-on-scroll fade-in-up">
+                    <div class="service-panel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="2"/>
+                            <path d="M7 2v20M17 2v20M2 12h20M2 7h5M17 7h5M2 17h5M17 17h5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-panel-title">Brand Films & Commercials</h3>
+                    <p class="service-panel-desc">A video built to represent the whole business, not just one product. From concept through final cut.</p>
+                    <div class="service-panel-tags">
+                        <span class="service-panel-tag">Brand Story Films</span>
+                        <span class="service-panel-tag">Product Launch</span>
+                        <span class="service-panel-tag">Commercial Ads</span>
+                        <span class="service-panel-tag">Testimonial Videos</span>
+                        <span class="service-panel-tag">Case Studies</span>
+                    </div>
+                    <a href="contact.html" class="service-panel-link">→ Talk About Your Brand Film</a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-panel-card animate-on-scroll fade-in-up">
+                    <div class="service-panel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="6" cy="6" r="3"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-panel-title">Video Editing & Post-Production</h3>
+                    <p class="service-panel-desc">The difference between content that gets watched and content that gets scrolled past. Editing is where retention is won or lost.</p>
+                    <div class="service-panel-tags">
+                        <span class="service-panel-tag">Corporate & Promotional</span>
+                        <span class="service-panel-tag">YouTube & Social</span>
+                        <span class="service-panel-tag">Podcast Editing</span>
+                        <span class="service-panel-tag">Product Demos</span>
+                        <span class="service-panel-tag">Event Highlights</span>
+                        <span class="service-panel-tag">Color Grading</span>
+                        <span class="service-panel-tag">Captioning</span>
+                    </div>
+                    <a href="contact.html" class="service-panel-link">→ Let's Edit Your Next Video</a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="service-panel-card animate-on-scroll fade-in-up">
+                    <div class="service-panel-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-panel-title">Motion Graphics & Character Design</h3>
+                    <p class="service-panel-desc">The visual layer that makes a video feel finished. Titles, lower-thirds, animated infographics, mascots, and brand characters.</p>
+                    <div class="service-panel-tags">
+                        <span class="service-panel-tag">Motion Graphics Packages</span>
+                        <span class="service-panel-tag">Explainer Animation</span>
+                        <span class="service-panel-tag">Mascots & Characters</span>
+                        <span class="service-panel-tag">Expression Sheets</span>
+                        <span class="service-panel-tag">Lower-thirds</span>
+                    </div>
+                    <a href="contact.html" class="service-panel-link">→ Design Your Character</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RIVER DIVIDER -->
+    <div class="river-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="url(#riverGrad1)" opacity="0.15"/>
+            <path d="M0,80 C240,20 480,100 720,40 C960,100 1200,20 1440,80 L1440,120 L0,120 Z" fill="url(#riverGrad1)" opacity="0.1"/>
+            <defs>
+                <linearGradient id="riverGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#81A8BA"/>
+                    <stop offset="50%" style="stop-color:#D1AB9B"/>
+                    <stop offset="100%" style="stop-color:#212C48"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- WHY THIS IS DIFFERENT -->
+    <section class="content-section content-section--alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">Our Edge</span>
+                <h2 class="section-title">What actually makes this different</h2>
+            </div>
+            
+            <div class="why-different-grid animate-on-scroll fade-in-up" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+                <div style="font-family: var(--font-heading); font-size: clamp(1.3rem, 2vw, 1.8rem); font-weight: 700; color: var(--c-navy); line-height: 1.4; position: relative;">
+                    <span style="font-size: 7rem; color: rgba(129,168,186,0.15); font-family: serif; position: absolute; top: -2.5rem; left: -1.5rem; line-height: 1;">&ldquo;</span>
+                    <p>Senior people on every project. Fast turnarounds. Assets delivered cut for the platform they're actually running on.</p>
+                </div>
+                
+                <div class="edge-list">
+                    <div class="edge-item">
+                        <span class="edge-num">01</span>
+                        <div class="edge-text">
+                            <h4>Strategy first, shot list second</h4>
+                            <p>We start with what the video needs to achieve, not what it needs to look like.</p>
+                        </div>
+                    </div>
+                    <div class="edge-item">
+                        <span class="edge-num">02</span>
+                        <div class="edge-text">
+                            <h4>Senior creatives, not junior teams</h4>
+                            <p>Every project has experienced production people on it, not interns learning on your budget.</p>
+                        </div>
+                    </div>
+                    <div class="edge-item">
+                        <span class="edge-num">03</span>
+                        <div class="edge-text">
+                            <h4>Collaborative cuts, not final reveals</h4>
+                            <p>You see the edit as it develops, not just a surprise at the end.</p>
+                        </div>
+                    </div>
+                    <div class="edge-item">
+                        <span class="edge-num">04</span>
+                        <div class="edge-text">
+                            <h4>Platform-ready delivery</h4>
+                            <p>Every asset comes cut and sized for wherever it actually needs to run.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-in-up">
+                <span class="section-tag">Process</span>
+                <h2 class="section-title">A realistic production process</h2>
+            </div>
+            <div class="process-timeline process-timeline--5 stagger-children">
+                <div class="process-step animate-on-scroll fade-in-up">
                     <div class="step-number-wrap">
                         <span class="step-number">01</span>
                         <div class="step-line"></div>
                     </div>
                     <div class="step-content">
                         <h3 class="step-title">Discovery</h3>
-                        <p class="step-desc">What's this video actually supposed to do for your business? We dig into your goals, audience, and competitive landscape.</p>
+                        <p class="step-desc">Business, audience, and platform</p>
                     </div>
                 </div>
-                <div class="process-step animate-on-scroll fade-in-up" id="step-strategy">
+                <div class="process-step animate-on-scroll fade-in-up">
                     <div class="step-number-wrap">
                         <span class="step-number">02</span>
                         <div class="step-line"></div>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Strategy & Script</h3>
-                        <p class="step-desc">A plan for the message and where it'll run. We craft the narrative, write the script, and map out the distribution channels.</p>
+                        <h3 class="step-title">Script & Storyboard</h3>
+                        <p class="step-desc">The plan before anything gets made</p>
                     </div>
                 </div>
-                <div class="process-step animate-on-scroll fade-in-up" id="step-production">
+                <div class="process-step animate-on-scroll fade-in-up">
                     <div class="step-number-wrap">
                         <span class="step-number">03</span>
                         <div class="step-line"></div>
                     </div>
                     <div class="step-content">
                         <h3 class="step-title">Production</h3>
-                        <p class="step-desc">Filming or animation, built for the platforms it's headed to. Every frame is intentional, every cut is purposeful.</p>
+                        <p class="step-desc">Filming or animation</p>
                     </div>
                 </div>
-                <div class="process-step animate-on-scroll fade-in-up" id="step-distribution">
+                <div class="process-step animate-on-scroll fade-in-up">
                     <div class="step-number-wrap">
                         <span class="step-number">04</span>
+                        <div class="step-line"></div>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Distribution & Optimization</h3>
-                        <p class="step-desc">Paid placement, tracking, and iteration based on real performance. We don't just deliver — we deploy and optimize.</p>
+                        <h3 class="step-title">Post</h3>
+                        <p class="step-desc">Editing, sound, color, motion</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll fade-in-up">
+                    <div class="step-number-wrap">
+                        <span class="step-number">05</span>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title">Delivery</h3>
+                        <p class="step-desc">Cut for every platform it runs on</p>
                     </div>
                 </div>
             </div>

@@ -647,6 +647,22 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
             .highlight-strip { grid-template-columns: 1fr; } 
             .why-different-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
         }
+        .legal-hero { padding: 8rem 2rem 4rem; text-align: center; background: linear-gradient(180deg, #F8FAFC 0%, #F0F4F5 100%); }
+        .legal-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--c-navy); margin-bottom: 1rem; }
+        .legal-hero .last-updated { font-size: 0.88rem; color: var(--text-muted); }
+        .legal-body { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+        .legal-body h2 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--c-navy); margin: 3rem 0 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--bg-tertiary); }
+        .legal-body h3 { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--c-navy); margin: 1.75rem 0 0.5rem; }
+        .legal-body p { font-size: 0.97rem; color: var(--text-body); line-height: 1.85; margin-bottom: 1rem; }
+        .legal-body ul, .legal-body ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .legal-body ul li, .legal-body ol li { font-size: 0.97rem; color: var(--text-body); line-height: 1.85; margin-bottom: 0.4rem; }
+        .legal-body a { color: var(--c-teal); text-decoration: underline; }
+        .legal-toc { background: var(--bg-secondary); border-radius: 16px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+        .legal-toc h4 { font-family: var(--font-heading); font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--c-navy); margin-bottom: 1rem; }
+        .legal-toc ol { padding-left: 1.25rem; }
+        .legal-toc ol li { font-size: 0.9rem; margin-bottom: 0.35rem; }
+        .legal-toc ol li a { color: var(--c-teal); text-decoration: none; font-weight: 500; }
+        .legal-toc ol li a:hover { text-decoration: underline; }
 /* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */

@@ -43,7 +43,7 @@
 
   /* Typography */
   --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Sora', var(--font-body);
+  --font-heading: 'Syne', var(--font-body);
 
   /* Layout */
   --section-py: 110px;

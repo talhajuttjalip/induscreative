@@ -663,6 +663,199 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
         .legal-toc ol li { font-size: 0.9rem; margin-bottom: 0.35rem; }
         .legal-toc ol li a { color: var(--c-teal); text-decoration: none; font-weight: 500; }
         .legal-toc ol li a:hover { text-decoration: underline; }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.team-card {
+    background: white;
+    border: 1px solid rgba(207,205,201,0.7);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--c-teal);
+    box-shadow: 0 20px 50px rgba(33,44,72,0.1);
+}
+.team-card-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.team-card-initials {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+.team-card-body {
+    padding: 1.75rem;
+}
+.team-card-role {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--c-teal);
+    margin-bottom: 0.4rem;
+}
+.team-card-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+.team-card-bio {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+.team-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+.team-card-tag {
+    padding: 0.25rem 0.7rem;
+    border-radius: 60px;
+    background: rgba(129,168,186,0.08);
+    border: 1px solid rgba(129,168,186,0.18);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--c-navy);
+}
+.team-card-socials {
+    display: flex;
+    gap: 0.6rem;
+}
+.team-social-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--c-pebble);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-body);
+    transition: all 0.2s;
+}
+.team-social-link:hover {
+    background: var(--c-navy);
+    border-color: var(--c-navy);
+    color: white;
+}
+/* FOUNDER card — larger, spanning 2 cols on top row */
+.team-card--featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.team-card--featured .team-card-photo {
+    aspect-ratio: auto;
+    min-height: 360px;
+    border-radius: 0;
+}
+/* VALUES ROW */
+.values-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+.value-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid rgba(207,205,201,0.6);
+    transition: all 0.3s;
+}
+.value-item:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-4px);
+}
+.value-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--c-navy);
+    border: 1px solid rgba(129,168,186,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+}
+.value-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.5rem;
+}
+.value-desc {
+    font-size: 0.85rem;
+    color: var(--text-body);
+    line-height: 1.65;
+}
+/* HIRING BANNER */
+.hiring-banner {
+    background: linear-gradient(135deg, rgba(129,168,186,0.08) 0%, rgba(33,44,72,0.04) 100%);
+    border: 1px solid rgba(129,168,186,0.2);
+    border-radius: 24px;
+    padding: 3rem 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+.hiring-banner h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.5rem;
+}
+.hiring-banner p {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    margin: 0;
+}
+@media (max-width: 1024px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-card--featured { grid-column: span 2; }
+    .values-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .team-grid { grid-template-columns: 1fr; }
+    .team-card--featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .team-card--featured .team-card-photo { min-height: 220px; border-radius: 0; }
+    .values-row { grid-template-columns: 1fr 1fr; }
+    .hiring-banner { grid-template-columns: 1fr; }
+}
 /* --------------------------------------------------------------------------
    Buttons
    -------------------------------------------------------------------------- */

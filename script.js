@@ -359,3 +359,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+        (() => {
+            const modal = document.getElementById("portfolio-video-modal");
+            const modalTitle = document.getElementById("portfolio-video-title");
+            const player = document.getElementById("portfolio-video-player");
+            const closeButton = document.getElementById("portfolio-video-close");
+            const triggers = document.querySelectorAll(".portfolio-video-trigger");
+            let lastTrigger = null;
+
+            if (!modal || !modalTitle || !player || !closeButton || !triggers.length) return;
+
+            const closeVideo = () => {
+                if (modal.open) modal.close();
+            };
+
+            triggers.forEach((trigger) => {
+                trigger.addEventListener("click", () => {
+                    const card = trigger.closest(".portfolio-video-card");
+                    const videoId = card?.dataset.videoId;
+                    const videoTitle = card?.dataset.videoTitle || "Portfolio video";
+
+                    if (!videoId || modal.open) return;
+
+                    lastTrigger = trigger;
+                    modalTitle.textContent = videoTitle;
+                    player.title = videoTitle;
+                    player.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
+                    document.body.classList.add("video-modal-open");
+                    modal.showModal();
+                    closeButton.focus({ preventScroll: true });
+                });
+            });
+
+            closeButton.addEventListener("click", closeVideo);
+
+            modal.addEventListener("click", (event) => {
+                if (event.target === modal) closeVideo();
+            });
+
+            modal.addEventListener("cancel", (event) => {
+                event.preventDefault();
+                closeVideo();
+            });
+
+            modal.addEventListener("close", () => {
+                player.removeAttribute("src");
+                player.title = "Portfolio video player";
+                document.body.classList.remove("video-modal-open");
+                lastTrigger?.focus({ preventScroll: true });
+                lastTrigger = null;
+            });
+        })();

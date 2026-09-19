@@ -16,6 +16,219 @@
     <link href='https://fonts.googleapis.com/css?family=Syne' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .portfolio-video-card {
+            position: relative;
+            isolation: isolate;
+            cursor: pointer;
+        }
+
+        .portfolio-video-card .portfolio-card-img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 8px;
+            background: var(--c-navy, #1f4b65);
+        }
+
+        .portfolio-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 450ms ease;
+        }
+
+        .portfolio-video-card .portfolio-card-img::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(5, 19, 29, 0.28));
+            pointer-events: none;
+        }
+
+        .portfolio-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            display: grid;
+            width: 64px;
+            height: 64px;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            color: #fff;
+            background: rgba(31, 75, 101, 0.9);
+            box-shadow: 0 12px 32px rgba(5, 19, 29, 0.3);
+            transform: translate(-50%, -50%);
+            transition: background-color 200ms ease, transform 200ms ease;
+            pointer-events: none;
+        }
+
+        .portfolio-play-icon svg {
+            width: 24px;
+            height: 24px;
+            margin-left: 3px;
+        }
+
+        .portfolio-video-trigger {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            border-radius: 8px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .portfolio-video-trigger:focus-visible {
+            outline: 3px solid var(--c-teal, #6795ac);
+            outline-offset: 4px;
+        }
+
+        .portfolio-video-card:hover .portfolio-thumbnail {
+            transform: scale(1.035);
+        }
+
+        .portfolio-video-card:hover .portfolio-play-icon {
+            background: var(--c-teal, #6795ac);
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        .video-modal {
+            width: min(1080px, calc(100% - 2rem));
+            max-width: none;
+            padding: 0;
+            border: 0;
+            overflow: visible;
+            color: #fff;
+            background: transparent;
+        }
+
+        .video-modal::backdrop {
+            background: rgba(5, 19, 29, 0.88);
+            backdrop-filter: blur(7px);
+        }
+
+        .video-modal[open] {
+            animation: portfolio-modal-in 180ms ease-out;
+        }
+
+        .video-modal__surface {
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            background: #071821;
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+        }
+
+        .video-modal__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.85rem 1rem 0.85rem 1.25rem;
+        }
+
+        .video-modal__title {
+            margin: 0;
+            overflow: hidden;
+            font-family: var(--font-heading, "Outfit", sans-serif);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .video-modal__close {
+            display: grid;
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            padding: 0;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: background-color 180ms ease, border-color 180ms ease;
+        }
+
+        .video-modal__close:hover,
+        .video-modal__close:focus-visible {
+            border-color: rgba(255, 255, 255, 0.55);
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .video-modal__close:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
+        .video-modal__player {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .video-modal__player iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        body.video-modal-open {
+            overflow: hidden;
+        }
+
+        @keyframes portfolio-modal-in {
+            from {
+                opacity: 0;
+                transform: translateY(12px) scale(0.985);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 480px) {
+            #portfolio-grid .portfolio-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+
+            .portfolio-play-icon {
+                width: 54px;
+                height: 54px;
+            }
+
+            .video-modal {
+                width: calc(100% - 1rem);
+            }
+
+            .video-modal__header {
+                padding: 0.7rem 0.75rem 0.7rem 1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .portfolio-thumbnail,
+            .portfolio-play-icon,
+            .video-modal[open] {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -589,6 +802,82 @@
         </div>
     </footer>
 
+    <dialog class="video-modal" id="portfolio-video-modal" aria-labelledby="portfolio-video-title">
+        <div class="video-modal__surface">
+            <div class="video-modal__header">
+                <h2 class="video-modal__title" id="portfolio-video-title">Portfolio video</h2>
+                <button class="video-modal__close" id="portfolio-video-close" type="button" aria-label="Close video">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <path d="M18 6 6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="video-modal__player">
+                <iframe
+                    id="portfolio-video-player"
+                    title="Portfolio video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </dialog>
+
     <script src="script.js"></script>
+    <script>
+        (() => {
+            const modal = document.getElementById("portfolio-video-modal");
+            const modalTitle = document.getElementById("portfolio-video-title");
+            const player = document.getElementById("portfolio-video-player");
+            const closeButton = document.getElementById("portfolio-video-close");
+            const triggers = document.querySelectorAll(".portfolio-video-trigger");
+            let lastTrigger = null;
+
+            if (!modal || !modalTitle || !player || !closeButton || !triggers.length) return;
+
+            const closeVideo = () => {
+                if (modal.open) modal.close();
+            };
+
+            triggers.forEach((trigger) => {
+                trigger.addEventListener("click", () => {
+                    const card = trigger.closest(".portfolio-video-card");
+                    const videoId = card?.dataset.videoId;
+                    const videoTitle = card?.dataset.videoTitle || "Portfolio video";
+
+                    if (!videoId || modal.open) return;
+
+                    lastTrigger = trigger;
+                    modalTitle.textContent = videoTitle;
+                    player.title = videoTitle;
+                    player.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
+                    document.body.classList.add("video-modal-open");
+                    modal.showModal();
+                    closeButton.focus({ preventScroll: true });
+                });
+            });
+
+            closeButton.addEventListener("click", closeVideo);
+
+            modal.addEventListener("click", (event) => {
+                if (event.target === modal) closeVideo();
+            });
+
+            modal.addEventListener("cancel", (event) => {
+                event.preventDefault();
+                closeVideo();
+            });
+
+            modal.addEventListener("close", () => {
+                player.removeAttribute("src");
+                player.title = "Portfolio video player";
+                document.body.classList.remove("video-modal-open");
+                lastTrigger?.focus({ preventScroll: true });
+                lastTrigger = null;
+            });
+        })();
+    </script>
 </body>
 </html>
+

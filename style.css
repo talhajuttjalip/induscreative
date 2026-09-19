@@ -773,7 +773,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 }
 .team-card--featured .team-card-photo {
     aspect-ratio: auto;
-    min-height: 360px;
+    min-height: 450px;
     border-radius: 0;
 }
 /* VALUES ROW */

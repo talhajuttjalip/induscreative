@@ -42,8 +42,8 @@
   --glass-shadow: 0 12px 36px rgba(33, 44, 72, 0.06);
 
   /* Typography */
-  --font-body: 'Source Serif 4', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Syne', var(--font-body);
+  --font-body: 'Source Serif 4', system-ui, -apple-system, serif;
+  --font-heading: 'Satoshi', var(--font-body);
 
   /* Layout */
   --section-py: 110px;

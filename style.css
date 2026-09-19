@@ -42,7 +42,7 @@
   --glass-shadow: 0 12px 36px rgba(33, 44, 72, 0.06);
 
   /* Typography */
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Source Serif 4', system-ui, -apple-system, sans-serif;
   --font-heading: 'Syne', var(--font-body);
 
   /* Layout */

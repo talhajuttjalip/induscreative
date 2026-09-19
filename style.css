@@ -665,7 +665,6 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
         .legal-toc ol li a:hover { text-decoration: underline; }
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 .team-card {

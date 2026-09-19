@@ -1,0 +1,11 @@
+# mod_rewrite starts here
+RewriteEngine On
+
+# 1. Remove .html from the visible URL bar by redirecting to the extensionless version
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# 2. Internally map the extensionless URL back to the actual .html file so it loads
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]

@@ -337,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 13. Contact Form Submission (Web3Forms AJAX)
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     const contactForm = document.querySelector('#contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {

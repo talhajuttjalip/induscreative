@@ -336,11 +336,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 13. Contact Form Validation
+    // 13. Contact Form Submission (Web3Forms AJAX)
     const contactForm = document.querySelector('#contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            
             // Basic validation
             const requiredFields = contactForm.querySelectorAll('[required]');
             let valid = true;
@@ -352,10 +353,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     field.style.borderColor = '';
                 }
             });
-            if (valid) {
-                alert('Thank you! We\'ll be in touch within one business day.');
-                contactForm.reset();
-            }
+
+            if (!valid) return;
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+
+            const formData = new FormData(contactForm);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status === 200) {
+                    alert('Thank you! We\'ll be in touch within one business day.');
+                    contactForm.reset();
+                } else {
+                    alert(json.message || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Something went wrong. Please check your connection.');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnText;
+            });
         });
     }
 });
+

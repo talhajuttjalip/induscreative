@@ -1162,7 +1162,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 .reels-track {
   display: flex;
   gap: 1.25rem;
-  animation: marquee-scroll 35s linear infinite;
+  animation: marquee-scroll 60s linear infinite;
   padding-left: 1.25rem;
 }
 

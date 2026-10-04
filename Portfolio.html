@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="p2-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Indus Creative Video Work</title>
+    <title>Portfolio 2.0 | Indus Creative Video Work</title>
     <meta name="description" content="Brand films, animation, and paid video campaigns from Indus Creative — browse by category to see work relevant to what you're planning.">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Portfolio | Indus Creative Video Work">
@@ -232,8 +232,10 @@
             }
         }
     </style>
+<link rel="stylesheet" href="portfolio-2.css">
+    <link rel="stylesheet" href="indus-brand.css">
 </head>
-<body>
+<body class="ic-brand ic-page-portfolio2 ic-portfolio">
 
     <!-- ═══════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════ -->
     <nav class="navbar" id="navbar">
@@ -510,153 +512,23 @@
     </div>
 
     <!-- ═══════════════════════════════════════════ PORTFOLIO GRID ═══════════════════════════════════════════ -->
-    <section class="content-section" id="portfolio-grid">
-        <div class="container">
-            <div class="portfolio-filters animate-on-scroll fade-in-up">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="brand-films">Brand Films</button>
-                <button class="filter-btn" data-filter="explainer">Explainer & Product Videos</button>
-                <button class="filter-btn" data-filter="animation">2D Animation</button>
-                <button class="filter-btn" data-filter="motion">Motion Graphics</button>
-                <button class="filter-btn" data-filter="social">Social & Short-Form Video</button>
-                <button class="filter-btn" data-filter="campaigns">YouTube & Paid Video Ad Campaigns</button>
-            </div>
-
-            <div class="category-descriptions animate-on-scroll fade-in-up" style="margin-bottom: 3rem; text-align: center; color: var(--c-pebble);">
-                <p data-desc="all">Browse our full range of work across production, animation, and paid campaigns.</p>
-                <p data-desc="brand-films" style="display: none;">Full-length brand and commercial work built to represent the whole business, not just one product.</p>
-                <p data-desc="explainer" style="display: none;">Animated and live-action content built to simplify a specific offer or product.</p>
-                <p data-desc="animation" style="display: none;">Explainer, whiteboard, and brand story animation from concept to final render.</p>
-                <p data-desc="motion" style="display: none;">Title packages, animated infographics, and custom character work.</p>
-                <p data-desc="social" style="display: none;">Content built natively for Reels, TikTok, and Shorts, not repurposed from longer cuts.</p>
-                <p data-desc="campaigns" style="display: none;">Production plus the media results behind it, where we can share performance data.</p>
-            </div>
-
-            <div class="portfolio-grid stagger-children" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
-                
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="brand-films" data-video-id="mP-StF8N5Gg" data-video-title="Intech Intro">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/mP-StF8N5Gg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-teal); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">Brand Films</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">Intech Intro</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">A focused brand introduction created for Intech.</p>
-                    </div>
-                    <button class="portfolio-video-trigger" type="button" aria-label="Play Intech Intro" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="brand-films" data-video-id="rBK2oFmx-gE" data-video-title="The Oasis Golf &amp; Aqua Resort Leisure">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/rBK2oFmx-gE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-teal); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">Brand Films</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">The Oasis Golf &amp; Aqua Resort</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">A cinematic leisure brand film for The Oasis Golf &amp; Aqua Resort.</p>
-                    </div>
-                    <button class="portfolio-video-trigger" type="button" aria-label="Play The Oasis Golf and Aqua Resort Leisure" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="explainer" data-video-id="WmEekHpl4ls" data-video-title="Explainer & Product Videos">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/WmEekHpl4ls/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-sand); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">Explainer & Product Videos</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">SaaS Platform Walkthrough</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">Simplified complex workflow into an engaging 90-second animated explainer.</p>
-                    </div>
-                    <button class="portfolio-video-trigger" type="button" aria-label="SaaS Platform Walkthrough" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="animation" data-video-id="WmEekHpl4ls" data-video-title="2D Animation Showreel — Character, Product, Stories">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/kyRQhGdoYU0/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-teal); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">2D Animation</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">2D Animation Showreel</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">Character, product, and story-driven animation from our 2D showreel.</p>
-                    </div>
-                    <button class="portfolio-video-trigger" type="button" aria-label="Play 2D Animation Showreel" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="motion" data-video-id="jV5ExbqXPdM" data-video-title="Video Editing &amp; VFX Showreel">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/jV5ExbqXPdM/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-sand); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">Motion Graphics</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">Video Editing &amp; VFX Showreel</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">A selection of video editing, compositing, and visual effects work.</p>
-                    </div>
-                    <button class="portfolio-video-trigger" type="button" aria-label="Play Video Editing and VFX Showreel" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="social" data-video-id="ecD79DApCOo" data-video-title="TikTok Organic Strategy<">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/ecD79DApCOo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-teal); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">Social & Short-Form Video</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">TikTok Organic Strategy</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">Series of 15 short-form vertical videos driving brand awareness natively.</p>
-                    </div>
-                 <button class="portfolio-video-trigger" type="button" aria-label="TikTok Organic Strategy" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="social" data-video-id="CmVDDO91uig" data-video-title="Instagram Reels Series">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/CmVDDO91uig/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-teal); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">Social & Short-Form Video</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">Instagram Reels Series</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">Podcast clips and micro-interviews repurposed for high engagement on IG.</p>
-                    </div>
-                    <button class="portfolio-video-trigger" type="button" aria-label="Instagram Reels Series" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-                <div class="portfolio-card portfolio-video-card animate-on-scroll fade-in-up" data-category="social" data-video-id="17CavTcP8eo" data-video-title="B2B Lead Gen YouTube Ad">
-                    <div class="portfolio-card-img">
-                        <img class="portfolio-thumbnail" src="https://i.ytimg.com/vi/17CavTcP8eo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
-                        <span class="portfolio-play-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
-                    </div>
-                    <div class="portfolio-card-body">
-                        <span class="portfolio-card-category" style="color: var(--c-sand); font-size: 0.875rem; font-weight: 600; text-transform: uppercase;">YouTube & Paid Video Ad Campaigns</span>
-                        <h3 class="portfolio-card-title" style="margin: 0.5rem 0; font-family: var(--font-heading);">B2B Lead Gen YouTube Ad</h3>
-                        <p class="portfolio-card-desc" style=" font-size: 0.95rem;">Direct response video ad resulting in a 45% lower CPA over a 3-month campaign.</p>
-                    </div>
-                 <button class="portfolio-video-trigger" type="button" aria-label="B2B Lead Gen YouTube Ad" aria-haspopup="dialog" aria-controls="portfolio-video-modal"></button>
-                </div>
-
-            </div>
-        </div>
-    </section>
+<section class="p2-showcase" id="portfolio-grid" aria-labelledby="p2-heading"><div class="p2-container"><header class="p2-intro"><h2 id="p2-heading">How can we help <span>you?</span></h2><p>Explore our work in video, animation, digital products, design, and marketing.</p></header><nav class="p2-jump" aria-label="Portfolio categories"><p class="p2-jump__label">Jump to a category</p><div class="p2-jump__links"><a href="#p2-section-0">Brand Films</a><a href="#p2-section-1">Explainers</a><a href="#p2-section-2">Podcast Editing</a><a href="#p2-section-3">Short Form</a><a href="#p2-section-4">Ad Creatives</a><a href="#p2-section-5">2D Animation</a><a href="#p2-section-6">Web Development & SEO</a><a href="#p2-section-7">Product & Desktop Apps</a><a href="#p2-section-8">Graphic Design</a><a href="#p2-section-9">SMM</a></div></nav><section id="p2-section-0" tabindex="-1" class="p2-category" aria-labelledby="p2-category-0"><header><h3 id="p2-category-0">YouTube Videos & Brand Films</h3><p>Long-form editing and brand storytelling, with a clear message from the first frame to the last.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="jV5ExbqXPdM" data-video-title="Video Editing &amp; VFX Showreel"><div class="p2-media"><iframe class="p2-inline-player" title="Video Editing &amp; VFX Showreel" src="https://www.youtube-nocookie.com/embed/jV5ExbqXPdM?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=jV5ExbqXPdM&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Video Editing &amp; VFX Showreel</h4></article>
+<article class="p2-video portfolio-video-card" data-video-id="rBK2oFmx-gE" data-video-title="The Oasis Golf &amp; Aqua Resort"><div class="p2-media"><iframe class="p2-inline-player" title="The Oasis Golf &amp; Aqua Resort" src="https://www.youtube-nocookie.com/embed/rBK2oFmx-gE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=rBK2oFmx-gE&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>The Oasis Golf &amp; Aqua Resort</h4></article></div></section>
+<section id="p2-section-1" tabindex="-1" class="p2-category" aria-labelledby="p2-category-1"><header><h3 id="p2-category-1">Explainers / Launch Videos</h3><p>Make your product easier to understand with animation, focused walkthroughs, and a story people can follow.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="WmEekHpl4ls" data-video-title="SaaS Platform Walkthrough"><div class="p2-media"><iframe class="p2-inline-player" title="SaaS Platform Walkthrough" src="https://www.youtube-nocookie.com/embed/WmEekHpl4ls?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=WmEekHpl4ls&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>SaaS Platform Walkthrough</h4></article>
+<article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Next launch video</h4></article></div></section>
+<section id="p2-section-2" tabindex="-1" class="p2-category" aria-labelledby="p2-category-2"><header><h3 id="p2-category-2">Podcast Editing</h3><p>Conversation-led clips with purposeful pacing and a clear story.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="CmVDDO91uig" data-video-title="Podcast &amp; Interview Clips"><div class="p2-media"><iframe class="p2-inline-player" title="Podcast &amp; Interview Clips" src="https://www.youtube-nocookie.com/embed/CmVDDO91uig?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CmVDDO91uig&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Podcast &amp; Interview Clips</h4></article>
+<article class="p2-video portfolio-video-card" data-video-id="ecD79DApCOo" data-video-title="Social Video Editing"><div class="p2-media"><iframe class="p2-inline-player" title="Social Video Editing" src="https://www.youtube-nocookie.com/embed/ecD79DApCOo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=ecD79DApCOo&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Social Video Editing</h4></article></div></section>
+<section id="p2-section-3" tabindex="-1" class="p2-category" aria-labelledby="p2-category-3"><header><h3 id="p2-category-3">Short Form Videos</h3><p>Native vertical edits for Reels, TikTok, and YouTube Shorts. A strong opening, tight pacing, and a clear point.</p></header><div class="p2-grid p2-grid--portrait"><article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%201.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="Founder Story"></video></div><h4>Founder Story</h4></article>
+<article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%202.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="TikTok Ad"></video></div><h4>TikTok Ad</h4></article>
+<article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%209.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="Product Motion"></video></div><h4>Product Motion</h4></article></div></section>
+<section id="p2-section-4" tabindex="-1" class="p2-category" aria-labelledby="p2-category-4"><header><h3 id="p2-category-4">Ad Creatives & VSLs</h3><p>Product and commercial edits that put the offer, message, and next step in focus.</p></header><div class="p2-grid p2-grid--portrait"><article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2013.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="SaaS Ad"></video></div><h4>SaaS Ad</h4></article>
+<article class="p2-video portfolio-video-card" data-video-id="17CavTcP8eo" data-video-title="B2B YouTube Ad"><div class="p2-media"><iframe class="p2-inline-player" title="B2B YouTube Ad" src="https://www.youtube-nocookie.com/embed/17CavTcP8eo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=17CavTcP8eo&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>B2B YouTube Ad</h4></article>
+<article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2012.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="E-Commerce Ad"></video></div><h4>E-Commerce Ad</h4></article></div></section>
+<section id="p2-section-5" tabindex="-1" class="p2-category" aria-labelledby="p2-category-5"><header><h3 id="p2-category-5">2D Animation</h3><p>Stories brought to life through character, motion, and illustration.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="kyRQhGdoYU0" data-video-title="2D Animation Showreel"><div class="p2-media"><iframe class="p2-inline-player" title="2D Animation Showreel" src="https://www.youtube-nocookie.com/embed/kyRQhGdoYU0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=kyRQhGdoYU0&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>2D Animation Showreel</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Next animation project</h4></article></div></section>
+<section id="p2-section-6" tabindex="-1" class="p2-category" aria-labelledby="p2-category-6"><header><h3 id="p2-category-6">Web Development & SEO</h3><p>Web experiences and search visibility, designed to work together.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Website project showcase</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>SEO project walkthrough</h4></article></div></section>
+<section id="p2-section-7" tabindex="-1" class="p2-category" aria-labelledby="p2-category-7"><header><h3 id="p2-category-7">Product Apps & Desktop Applications</h3><p>Digital products built for everyday workflows, across web and desktop.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Product app walkthrough</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Desktop application demo</h4></article></div></section>
+<section id="p2-section-8" tabindex="-1" class="p2-category" aria-labelledby="p2-category-8"><header><h3 id="p2-category-8">Graphic Design</h3><p>Visual identities and creative assets that make a brand recognisable.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Brand identity showcase</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Graphic design showcase</h4></article></div></section>
+<section id="p2-section-9" tabindex="-1" class="p2-category" aria-labelledby="p2-category-9"><header><h3 id="p2-category-9">Social Media Management (SMM)</h3><p>Content and campaigns that bring a consistent brand voice to social.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Social content showcase</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Campaign showcase</h4></article></div></section></div></section>
 
     <!-- ═══════════════════════════════════════════ INDUSTRIES ═══════════════════════════════════════════ -->
     <section class="industries content-section content-section--alt">
@@ -906,59 +778,5 @@
     </dialog>
 
     <script src="script.js"></script>
-    <script>
-        (() => {
-            const modal = document.getElementById("portfolio-video-modal");
-            const modalTitle = document.getElementById("portfolio-video-title");
-            const player = document.getElementById("portfolio-video-player");
-            const closeButton = document.getElementById("portfolio-video-close");
-            const triggers = document.querySelectorAll(".portfolio-video-trigger");
-            let lastTrigger = null;
-
-            if (!modal || !modalTitle || !player || !closeButton || !triggers.length) return;
-
-            const closeVideo = () => {
-                if (modal.open) modal.close();
-            };
-
-            triggers.forEach((trigger) => {
-                trigger.addEventListener("click", () => {
-                    const card = trigger.closest(".portfolio-video-card");
-                    const videoId = card?.dataset.videoId;
-                    const videoTitle = card?.dataset.videoTitle || "Portfolio video";
-
-                    if (!videoId || modal.open) return;
-
-                    lastTrigger = trigger;
-                    modalTitle.textContent = videoTitle;
-                    player.title = videoTitle;
-                    player.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`;
-                    document.body.classList.add("video-modal-open");
-                    modal.showModal();
-                    closeButton.focus({ preventScroll: true });
-                });
-            });
-
-            closeButton.addEventListener("click", closeVideo);
-
-            modal.addEventListener("click", (event) => {
-                if (event.target === modal) closeVideo();
-            });
-
-            modal.addEventListener("cancel", (event) => {
-                event.preventDefault();
-                closeVideo();
-            });
-
-            modal.addEventListener("close", () => {
-                player.removeAttribute("src");
-                player.title = "Portfolio video player";
-                document.body.classList.remove("video-modal-open");
-                lastTrigger?.focus({ preventScroll: true });
-                lastTrigger = null;
-            });
-        })();
-    </script>
 </body>
 </html>
-

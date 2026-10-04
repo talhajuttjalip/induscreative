@@ -2739,21 +2739,21 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 /* IC graphic system. Decorative assets do not replace content or controls. */
 html:has(body.ic-brand){overflow-x:clip;}
 .ic-brand .hero,.ic-brand .page-hero,.ic-brand .process,.ic-brand .why-us,.ic-brand .cta-section,.ic-brand .footer{isolation:isolate;}
-.ic-brand:not(.ic-portfolio) .hero::after,.ic-brand:not(.ic-portfolio) .page-hero::after{content:"";position:absolute;pointer-events:none;z-index:0;right:-90px;bottom:-65px;width:min(48vw,650px);aspect-ratio:747/390;background:url('assets/brand/asset-2.svg') center/contain no-repeat;opacity:.17;mask-image:linear-gradient(120deg,transparent 8%,#000 70%);}
+.ic-brand:not(.ic-portfolio) .hero::after,.ic-brand:not(.ic-portfolio) .page-hero::after{content:"";position:absolute;pointer-events:none;z-index:0;right:-90px;bottom:-65px;width:min(48vw,650px);aspect-ratio:747/390;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-2.svg') center/contain no-repeat;opacity:.17;mask-image:linear-gradient(120deg,transparent 8%,#000 70%);}
 .ic-brand .hero-content,.ic-brand .page-hero>.container{position:relative;z-index:1;}
-.ic-brand.ic-page-aboutindus .page-hero::after{background-image:url('assets/brand/asset-1.svg');right:4%;bottom:20px;width:300px;opacity:.1;mask-image:linear-gradient(100deg,transparent,#000);}
+.ic-brand.ic-page-aboutindus .page-hero::after{background-image:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-1.svg');right:4%;bottom:20px;width:300px;opacity:.1;mask-image:linear-gradient(100deg,transparent,#000);}
 .ic-brand .section-tag{display:inline-flex;align-items:center;gap:9px;}
-.ic-brand .section-tag::before{content:"";flex:0 0 17px;width:17px;height:17px;background:url('assets/brand/asset-6.svg') center/contain no-repeat;}
+.ic-brand .section-tag::before{content:"";flex:0 0 17px;width:17px;height:17px;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6.svg') center/contain no-repeat;}
 .ic-brand .why-us{position:relative;}
-.ic-brand .why-us::before{content:"";pointer-events:none;position:absolute;top:135px;left:26px;width:32px;height:95px;background:url('assets/brand/asset-3.svg') center/contain no-repeat;opacity:.7;}
+.ic-brand .why-us::before{content:"";pointer-events:none;position:absolute;top:135px;left:26px;width:32px;height:95px;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-3.svg') center/contain no-repeat;opacity:.7;}
 .ic-brand .process{position:relative;overflow:hidden;}
-.ic-brand .process::before{content:"";pointer-events:none;position:absolute;right:-45px;top:12px;width:350px;aspect-ratio:742/321;background:url('assets/brand/asset-5.svg') center/contain no-repeat;opacity:.18;mask-image:radial-gradient(ellipse at 95% 20%,#000,transparent 75%);z-index:0;}
+.ic-brand .process::before{content:"";pointer-events:none;position:absolute;right:-45px;top:12px;width:350px;aspect-ratio:742/321;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-5.svg') center/contain no-repeat;opacity:.18;mask-image:radial-gradient(ellipse at 95% 20%,#000,transparent 75%);z-index:0;}
 .ic-brand .process>.container{position:relative;z-index:1;}
 .ic-brand .cta-section{position:relative;overflow:hidden;}
-.ic-brand .cta-bg-pattern{position:absolute;inset:0 0 0 auto;width:42%;height:100%;pointer-events:none;background:url('assets/brand/asset-4.svg') right center/auto 100% no-repeat;opacity:.14;mask-image:linear-gradient(90deg,transparent,#000);z-index:0;}
+.ic-brand .cta-bg-pattern{position:absolute;inset:0 0 0 auto;width:42%;height:100%;pointer-events:none;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-4.svg') right center/auto 100% no-repeat;opacity:.14;mask-image:linear-gradient(90deg,transparent,#000);z-index:0;}
 .ic-brand .cta-section>.container{position:relative;z-index:1;}
 .ic-brand .footer{position:relative;overflow:hidden;}
-.ic-brand .footer::after{content:"";pointer-events:none;position:absolute;right:-90px;bottom:-80px;width:480px;aspect-ratio:747/390;background:url('assets/brand/asset-2.svg') center/contain no-repeat;opacity:.1;mask-image:linear-gradient(120deg,transparent,#000);z-index:0;}
+.ic-brand .footer::after{content:"";pointer-events:none;position:absolute;right:-90px;bottom:-80px;width:480px;aspect-ratio:747/390;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-2.svg') center/contain no-repeat;opacity:.1;mask-image:linear-gradient(120deg,transparent,#000);z-index:0;}
 .ic-brand .footer>.container{position:relative;z-index:1;}
 .ic-brand .btn:focus-visible,.ic-brand .nav-link:focus-visible{outline:3px solid var(--c-teal);outline-offset:4px;}
 @media(max-width:1200px){.ic-brand .why-us::before{display:none;}}
@@ -2763,7 +2763,7 @@ html:has(body.ic-brand){overflow-x:clip;}
 /* One flow mark for section labels and page badges across all pages. */
 .ic-brand .hero-badge{display:inline-flex!important;align-items:center;gap:9px;}
 .ic-brand .hero-badge .badge-dot{display:none;}
-.ic-brand .hero-badge::before{content:"";display:block;flex:0 0 17px;width:17px;height:17px;background:url('assets/brand/asset-6.svg') center/contain no-repeat;}
+.ic-brand .hero-badge::before{content:"";display:block;flex:0 0 17px;width:17px;height:17px;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6.svg') center/contain no-repeat;}
 .ic-brand .hero-badge,.ic-brand .section-tag{font-family:'Satoshi',Arial,sans-serif;}
 /* About: clearer hierarchy, a deliberate single founder profile, shorter reading measure. */
 .ic-page-aboutindus .page-hero{min-height:0;padding:150px 24px 76px;}

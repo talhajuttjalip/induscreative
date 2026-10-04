@@ -385,3 +385,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+document.addEventListener('DOMContentLoaded',()=>{
+ const items=[...document.querySelectorAll('.ic-page-aboutindus .faq-item')];
+ const sync=()=>items.forEach(item=>{const expanded=item.classList.contains('active');item.querySelector('.faq-question').setAttribute('aria-expanded',String(expanded));item.querySelector('.faq-answer').setAttribute('aria-hidden',String(!expanded));});
+ items.forEach((item,i)=>{const question=item.querySelector('.faq-question'),answer=item.querySelector('.faq-answer');question.id='about-faq-question-'+i;answer.id='about-faq-answer-'+i;question.setAttribute('role','button');question.setAttribute('tabindex','0');question.setAttribute('aria-controls',answer.id);answer.setAttribute('role','region');answer.setAttribute('aria-labelledby',question.id);question.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();question.click();}});question.addEventListener('click',()=>queueMicrotask(sync));});sync();
+});

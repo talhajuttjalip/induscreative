@@ -664,6 +664,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
         .legal-toc ol li a { color: var(--c-teal); text-decoration: none; font-weight: 500; }
         .legal-toc ol li a:hover { text-decoration: underline; }
 .team-grid {
+   padding-top: 20px;
     display: grid;
     gap: 2rem;
 }

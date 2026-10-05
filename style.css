@@ -360,7 +360,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
             font-size: 8rem;
             color: rgba(129, 168, 186, 0.2);
             position: absolute;
-            top: -2rem;
+            top: -4rem;
             left: -1rem;
             line-height: 1;
             font-family: serif;

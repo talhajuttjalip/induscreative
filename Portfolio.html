@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Indus Creative Video Work</title>
+    <title>Portfolio 2.0 | Indus Creative Video Work</title>
     <meta name="description" content="Brand films, animation, and paid video campaigns from Indus Creative — browse by category to see work relevant to what you're planning.">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Portfolio | Indus Creative Video Work">
@@ -16,6 +16,224 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">    
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .portfolio-video-card {
+            position: relative;
+            isolation: isolate;
+            cursor: pointer;
+        }
+
+        .portfolio-video-card .portfolio-card-img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 8px;
+            background: var(--c-navy, #1f4b65);
+        }
+
+        .portfolio-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 450ms ease;
+        }
+
+        .portfolio-video-card .portfolio-card-img::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(5, 19, 29, 0.28));
+            pointer-events: none;
+        }
+
+        .portfolio-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            display: grid;
+            width: 64px;
+            height: 64px;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            color: #fff;
+            background: rgba(31, 75, 101, 0.9);
+            box-shadow: 0 12px 32px rgba(5, 19, 29, 0.3);
+            transform: translate(-50%, -50%);
+            transition: background-color 200ms ease, transform 200ms ease;
+            pointer-events: none;
+        }
+
+        .portfolio-play-icon svg {
+            width: 24px;
+            height: 24px;
+            margin-left: 3px;
+        }
+
+        .portfolio-video-trigger {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            border-radius: 8px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .portfolio-video-trigger:focus-visible {
+            outline: 3px solid var(--c-teal, #6795ac);
+            outline-offset: 4px;
+        }
+
+        .portfolio-video-card:hover .portfolio-thumbnail {
+            transform: scale(1.035);
+        }
+
+        .portfolio-video-card:hover .portfolio-play-icon {
+            background: var(--c-teal, #6795ac);
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        .video-modal {
+            top: 50%;
+            transform: translate(-50%, -50%) !important;
+            left: 50%;
+            width: min(1080px, calc(100% - 2rem));
+            max-width: none;
+            padding: 0;
+            border: 0;
+            overflow: visible;
+            color: #fff;
+            background: transparent;
+        }
+
+        .video-modal::backdrop {
+            background: rgba(5, 19, 29, 0.88);
+            backdrop-filter: blur(7px);
+        }
+
+        .video-modal[open] {
+            animation: portfolio-modal-in 180ms ease-out;
+        }
+
+        .video-modal__surface {
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            background: #071821;
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+        }
+
+        .video-modal__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.85rem 1rem 0.85rem 1.25rem;
+        }
+
+        .video-modal__title {
+            margin: 0;
+            overflow: hidden;
+            font-family: var(--font-heading, "Outfit", sans-serif);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .video-modal__close {
+            display: grid;
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            padding: 0;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: background-color 180ms ease, border-color 180ms ease;
+        }
+
+        .video-modal__close:hover,
+        .video-modal__close:focus-visible {
+            border-color: rgba(255, 255, 255, 0.55);
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .video-modal__close:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
+        .video-modal__player {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .video-modal__player iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        body.video-modal-open {
+            overflow: hidden;
+        }
+
+        @keyframes portfolio-modal-in {
+            from {
+                opacity: 0;
+                transform: translateY(12px) scale(0.985);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 480px) {
+            #portfolio-grid .portfolio-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+
+            .portfolio-play-icon {
+                width: 54px;
+                height: 54px;
+            }
+
+            .video-modal {
+                width: calc(100% - 1rem);
+            }
+
+            .video-modal__header {
+                padding: 0.7rem 0.75rem 0.7rem 1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .portfolio-thumbnail,
+            .portfolio-play-icon,
+            .video-modal[open] {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="portfolio-2.css">
+    <link rel="stylesheet" href="indus-brand.css">
 </head>
 <body class="ic-brand ic-page-portfolio2 ic-portfolio">
 
@@ -170,7 +388,7 @@
                             </div>
                         </div>
                         <div class="reel-card">
-                            <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2010.mp4" autoplay loop muted playsinline></video>
+                            <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%207.mp4" autoplay loop muted playsinline></video>
                             <div class="reel-overlay">
                                 <span class="reel-badge">Product Motion</span>
                                 <p class="reel-caption">"Introducing <strong>Service M8</strong>"</p>
@@ -213,7 +431,7 @@
                             </div>
                         </div>
                         <div class="reel-card">
-                            <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%203.mp4" autoplay loop muted playsinline></video>
+                            <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%209.mp4" autoplay loop muted playsinline></video>
                             <div class="reel-overlay">
                                 <span class="reel-badge">Product Motion</span>
                                 <p class="reel-caption">"Introducing <strong>Service M8</strong>"</p>
@@ -269,7 +487,7 @@
                             </div>
                         </div>
                         <div class="reel-card">
-                            <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%203.mp4" autoplay loop muted playsinline></video>
+                            <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%207.mp4" autoplay loop muted playsinline></video>
                             <div class="reel-overlay">
                                 <span class="reel-badge">Product Motion</span>
                                 <p class="reel-caption">"Introducing <strong>Service M8</strong>"</p>
@@ -294,22 +512,24 @@
     </div>
 
     <!-- ═══════════════════════════════════════════ PORTFOLIO GRID ═══════════════════════════════════════════ -->
-<section class="p2-showcase" id="portfolio-grid" aria-labelledby="p2-heading"><div class="p2-container"><header class="p2-intro"><h2 id="p2-heading">How can we help <span>you?</span></h2><p>Explore our work in video, animation, digital products, design, and marketing.</p></header><nav class="p2-jump" aria-label="Portfolio categories"><p class="p2-jump__label">Jump to a category</p><div class="p2-jump__links"><a href="#p2-section-0">Brand Films</a><a href="#p2-section-1">Explainers</a><a href="#p2-section-2">Podcast Editing</a><a href="#p2-section-3">Short Form</a><a href="#p2-section-4">Ad Creatives</a><a href="#p2-section-5">2D Animation</a><a href="#p2-section-6">Web Development & SEO</a><a href="#p2-section-7">Product & Desktop Apps</a><a href="#p2-section-8">Graphic Design</a><a href="#p2-section-9">SMM</a></div></nav><section id="p2-section-0" tabindex="-1" class="p2-category" aria-labelledby="p2-category-0"><header><h3 id="p2-category-0">YouTube Videos & Brand Films</h3><p>Long-form editing and brand storytelling, with a clear message from the first frame to the last.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="CiD1HH-Y3OY" data-video-title="Youtube Video"><div class="p2-media"><iframe class="p2-inline-player" title="Youtube Video" src="https://www.youtube-nocookie.com/embed/CiD1HH-Y3OY?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CiD1HH-Y3OY&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Youtube Video</h4></article>
-<article class="p2-video portfolio-video-card" data-video-id="E14EPcly8mI" data-video-title="Brand Film"><div class="p2-media"><iframe class="p2-inline-player" title="Brand Film" src="https://www.youtube-nocookie.com/embed/E14EPcly8mI?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=E14EPcly8mI&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Brand Film</h4></article></div></section>
+<section class="p2-showcase" id="portfolio-grid" aria-labelledby="p2-heading"><div class="p2-container"><header class="p2-intro"><h2 id="p2-heading">How can we help <span>you?</span></h2><p>Explore our work in video, animation, digital products, design, and marketing.</p></header><nav class="p2-jump" aria-label="Portfolio categories"><p class="p2-jump__label">Jump to a category</p><div class="p2-jump__links"><a href="#p2-section-0">Brand Films</a><a href="#p2-section-1">Explainers</a><a href="#p2-section-2">Podcast Editing</a><a href="#p2-section-3">Short Form</a><a href="#p2-section-4">Ad Creatives</a><a href="#p2-section-5">2D Animation</a><a href="#p2-section-6">Web Development & SEO</a><a href="#p2-section-7">Product & Desktop Apps</a><a href="#p2-section-8">Graphic Design</a><a href="#p2-section-9">SMM</a></div></nav><section id="p2-section-0" tabindex="-1" class="p2-category" aria-labelledby="p2-category-0"><header><h3 id="p2-category-0">YouTube Videos & Brand Films</h3><p>Long-form editing and brand storytelling, with a clear message from the first frame to the last.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="jV5ExbqXPdM" data-video-title="Video Editing &amp; VFX Showreel"><div class="p2-media"><iframe class="p2-inline-player" title="Video Editing &amp; VFX Showreel" src="https://www.youtube-nocookie.com/embed/jV5ExbqXPdM?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=jV5ExbqXPdM&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Video Editing &amp; VFX Showreel</h4></article>
+<article class="p2-video portfolio-video-card" data-video-id="rBK2oFmx-gE" data-video-title="The Oasis Golf &amp; Aqua Resort"><div class="p2-media"><iframe class="p2-inline-player" title="The Oasis Golf &amp; Aqua Resort" src="https://www.youtube-nocookie.com/embed/rBK2oFmx-gE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=rBK2oFmx-gE&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>The Oasis Golf &amp; Aqua Resort</h4></article></div></section>
 <section id="p2-section-1" tabindex="-1" class="p2-category" aria-labelledby="p2-category-1"><header><h3 id="p2-category-1">Explainers / Launch Videos</h3><p>Make your product easier to understand with animation, focused walkthroughs, and a story people can follow.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="WmEekHpl4ls" data-video-title="SaaS Platform Walkthrough"><div class="p2-media"><iframe class="p2-inline-player" title="SaaS Platform Walkthrough" src="https://www.youtube-nocookie.com/embed/WmEekHpl4ls?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=WmEekHpl4ls&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>SaaS Platform Walkthrough</h4></article>
 <article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Next launch video</h4></article></div></section>
-<section id="p2-section-2" tabindex="-1" class="p2-category" aria-labelledby="p2-category-2"><header><h3 id="p2-category-2">Podcast Editing</h3><p>Conversation-led clips with purposeful pacing and a clear story.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="-AJC534D8t4" data-video-title="Podcast &amp; Interview Clips"><div class="p2-media"><iframe class="p2-inline-player" title="Podcast &amp; Interview Clips" src="https://www.youtube-nocookie.com/embed/-AJC534D8t4?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=-AJC534D8t4&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Podcast &amp; Interview Clips</h4></article>
-<article class="p2-video portfolio-video-card" data-video-id="QzwrJKpkyD0" data-video-title="Podcasts Showreel"><div class="p2-media"><iframe class="p2-inline-player" title="Podcasts Showreel" src="https://www.youtube-nocookie.com/embed/QzwrJKpkyD0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=QzwrJKpkyD0&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Podcasts Showreel</h4></article></div></section>
+<section id="p2-section-2" tabindex="-1" class="p2-category" aria-labelledby="p2-category-2"><header><h3 id="p2-category-2">Podcast Editing</h3><p>Conversation-led clips with purposeful pacing and a clear story.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="CmVDDO91uig" data-video-title="Podcast &amp; Interview Clips"><div class="p2-media"><iframe class="p2-inline-player" title="Podcast &amp; Interview Clips" src="https://www.youtube-nocookie.com/embed/CmVDDO91uig?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CmVDDO91uig&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Podcast &amp; Interview Clips</h4></article>
+<article class="p2-video portfolio-video-card" data-video-id="ecD79DApCOo" data-video-title="Social Video Editing"><div class="p2-media"><iframe class="p2-inline-player" title="Social Video Editing" src="https://www.youtube-nocookie.com/embed/ecD79DApCOo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=ecD79DApCOo&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>Social Video Editing</h4></article></div></section>
 <section id="p2-section-3" tabindex="-1" class="p2-category" aria-labelledby="p2-category-3"><header><h3 id="p2-category-3">Short Form Videos</h3><p>Native vertical edits for Reels, TikTok, and YouTube Shorts. A strong opening, tight pacing, and a clear point.</p></header><div class="p2-grid p2-grid--portrait"><article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%201.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="Founder Story"></video></div><h4>Founder Story</h4></article>
 <article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%202.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="TikTok Ad"></video></div><h4>TikTok Ad</h4></article>
 <article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%209.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="Product Motion"></video></div><h4>Product Motion</h4></article></div></section>
 <section id="p2-section-4" tabindex="-1" class="p2-category" aria-labelledby="p2-category-4"><header><h3 id="p2-category-4">Ad Creatives & VSLs</h3><p>Product and commercial edits that put the offer, message, and next step in focus.</p></header><div class="p2-grid p2-grid--portrait"><article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2013.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="SaaS Ad"></video></div><h4>SaaS Ad</h4></article>
-<article class="p2-video portfolio-video-card" data-video-id="Zidq5aDqv7U" data-video-title="B2B YouTube Ad"><div class="p2-media"><iframe class="p2-inline-player" title="B2B YouTube Ad" src="https://www.youtube-nocookie.com/embed/Zidq5aDqv7U?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=Zidq5aDqv7U&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>B2B YouTube Ad</h4></article>
+<article class="p2-video portfolio-video-card" data-video-id="17CavTcP8eo" data-video-title="B2B YouTube Ad"><div class="p2-media"><iframe class="p2-inline-player" title="B2B YouTube Ad" src="https://www.youtube-nocookie.com/embed/17CavTcP8eo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=17CavTcP8eo&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>B2B YouTube Ad</h4></article>
 <article class="p2-video"><div class="p2-media"><video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2012.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="E-Commerce Ad"></video></div><h4>E-Commerce Ad</h4></article></div></section>
 <section id="p2-section-5" tabindex="-1" class="p2-category" aria-labelledby="p2-category-5"><header><h3 id="p2-category-5">2D Animation</h3><p>Stories brought to life through character, motion, and illustration.</p></header><div class="p2-grid"><article class="p2-video portfolio-video-card" data-video-id="kyRQhGdoYU0" data-video-title="2D Animation Showreel"><div class="p2-media"><iframe class="p2-inline-player" title="2D Animation Showreel" src="https://www.youtube-nocookie.com/embed/kyRQhGdoYU0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=kyRQhGdoYU0&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div><h4>2D Animation Showreel</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Next animation project</h4></article></div></section>
 <section id="p2-section-6" tabindex="-1" class="p2-category" aria-labelledby="p2-category-6"><header><h3 id="p2-category-6">Web Development & SEO</h3><p>Web experiences and search visibility, designed to work together.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Website project showcase</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>SEO project walkthrough</h4></article></div></section>
 <section id="p2-section-7" tabindex="-1" class="p2-category" aria-labelledby="p2-category-7"><header><h3 id="p2-category-7">Product Apps & Desktop Applications</h3><p>Digital products built for everyday workflows, across web and desktop.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Product app walkthrough</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Desktop application demo</h4></article></div></section>
 <section id="p2-section-8" tabindex="-1" class="p2-category" aria-labelledby="p2-category-8"><header><h3 id="p2-category-8">Graphic Design</h3><p>Visual identities and creative assets that make a brand recognisable.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Brand identity showcase</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Graphic design showcase</h4></article></div></section>
+<section id="p2-section-9" tabindex="-1" class="p2-category" aria-labelledby="p2-category-9"><header><h3 id="p2-category-9">Social Media Management (SMM)</h3><p>Content and campaigns that bring a consistent brand voice to social.</p></header><div class="p2-grid"><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Social content showcase</h4></article><article class="p2-video p2-placeholder"><div class="p2-media p2-placeholder__media"><span class="p2-placeholder__mark" aria-hidden="true">IC</span><span class="p2-placeholder__label">Video coming soon</span><p>A space for our next project.</p></div><h4>Campaign showcase</h4></article></div></section></div></section>
+
     <!-- ═══════════════════════════════════════════ INDUSTRIES ═══════════════════════════════════════════ -->
     <section class="industries content-section content-section--alt">
         <div class="container">
@@ -516,11 +736,11 @@
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <a href="https://maps.app.goo.gl/qP6qeZ9dmUya2Xf66">718 Fulton Street, 2nd Floor, Aurora, IL 60505, United States</a>
+                            <a href="https://maps.app.goo.gl/qP6qeZ9dmUya2Xf66"><span>718 Fulton Street, 2nd Floor, Aurora, IL 60505, United States</span></a>
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <a href="https://maps.app.goo.gl/wnGC9BMXFrqHFhyp6">7 Milverton Gardens, Ilford, London, IG3 8DS, UK</a>
+                            <a href="https://maps.app.goo.gl/wnGC9BMXFrqHFhyp6"><span>7 Milverton Gardens, Ilford, IG3 8DS, UK</span></a>
                         </li>
                     </ul>
                 </div>

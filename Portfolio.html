@@ -410,38 +410,56 @@
         <h3 id="p2-category-4">Ad Creatives & VSLs</h3>
         <p>Product and commercial edits that put the offer, message, and next step in focus.</p>
     </header>
-    <div class="p2-grid p2-grid--portrait">
-        <article class="p2-video">
-            <div class="p2-media">
-                <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2013.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="SaaS Ad">
+
+    <div style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    ">
+
+        <!-- Left Portrait Video -->
+        <article class="p2-video" style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+            <div class="p2-media" style="width:200px; aspect-ratio:9/16; border-radius:10px; overflow:hidden; background:#111;">
+                <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2013.mp4#t=0.1"
+                       autoplay loop muted playsinline preload="metadata" aria-label="SaaS Ad"
+                       style="width:100%; height:100%; object-fit:cover; display:block;">
                 </video>
             </div>
             <h4>SaaS Ad</h4>
         </article>
-<article class="p2-video portfolio-video-card" 
-         data-video-id="17CavTcP8eo" 
-         data-video-title="B2B YouTube Ad"
-         style="width: 280px; max-width: 100%;">
-    <div class="p2-media" style="aspect-ratio: 16/9 !important; width: 100%;">
-        <iframe class="p2-inline-player" 
-                title="B2B YouTube Ad" 
-                src="https://www.youtube-nocookie.com/embed/17CavTcP8eo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=17CavTcP8eo&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1" 
-                allow="autoplay; encrypted-media; picture-in-picture; fullscreen" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                loading="lazy" 
-                allowfullscreen
-                style="width:100%; height:100%; border:0;">
-        </iframe>
-    </div>
-    <h4>B2B YouTube Ad</h4>
-</article>
-<article class="p2-video">
-    <div class="p2-media">
-        <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2012.mp4#t=0.1" autoplay loop muted playsinline preload="metadata" aria-label="E-Commerce Ad">
-        </video>
-    </div>
-    <h4>E-Commerce Ad</h4>
-</article>
+
+        <!-- Middle Landscape YouTube iframe -->
+        <article class="p2-video portfolio-video-card"
+                 data-video-id="17CavTcP8eo"
+                 data-video-title="B2B YouTube Ad"
+                 style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+            <div class="p2-media" style="width:360px; max-width:90vw; aspect-ratio:16/9; border-radius:10px; overflow:hidden; background:#fff;">
+                <iframe class="p2-inline-player"
+                        title="B2B YouTube Ad"
+                        src="https://www.youtube-nocookie.com/embed/17CavTcP8eo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=17CavTcP8eo&amp;playsinline=1&amp;rel=0&amp;controls=0&amp;enablejsapi=1"
+                        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        loading="lazy"
+                        allowfullscreen
+                        style="width:100%; height:100%; border:0; display:block;">
+                </iframe>
+            </div>
+            <h4>B2B YouTube Ad</h4>
+        </article>
+
+        <!-- Right Portrait Video -->
+        <article class="p2-video" style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+            <div class="p2-media" style="width:200px; aspect-ratio:9/16; border-radius:10px; overflow:hidden; background:#111;">
+                <video src="https://qfsv6teep8cemfyl.public.blob.vercel-storage.com/Video%2012.mp4#t=0.1"
+                       autoplay loop muted playsinline preload="metadata" aria-label="E-Commerce Ad"
+                       style="width:100%; height:100%; object-fit:cover; display:block;">
+                </video>
+            </div>
+            <h4>E-Commerce Ad</h4>
+        </article>
     </div>
 </section>
 <section id="p2-section-5" tabindex="-1" class="p2-category" aria-labelledby="p2-category-5">

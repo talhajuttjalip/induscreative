@@ -1510,7 +1510,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
   position: relative;
 }
 .service-list li::before {
-  content: '→';
+  background: url(https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6.svg) center / contain no-repeat;
   position: absolute;
   left: 0;
   color: var(--c-teal);

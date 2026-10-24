@@ -1505,8 +1505,11 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
   position: relative;
 }
 .service-list li::before {
-  content: url("https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6.svg");
-  position: absolute;
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  content: "";
+  background: url(https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6.svg) center / contain no-repeat;
   left: 0;
   color: var(--c-teal);
   font-weight: 700;

@@ -2625,7 +2625,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
   padding-left: 1.2rem;
 }
 .experience-card-list li::before {
-  content: '·';
+  content: url("https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6%20%281%29.svg");
   position: absolute;
   left: 0;
   color: var(--c-teal);

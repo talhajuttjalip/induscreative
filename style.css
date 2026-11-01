@@ -2746,7 +2746,6 @@ html:has(body.ic-brand){overflow-x:clip;}
 .ic-brand .section-tag{display:inline-flex;align-items:center;gap:9px;}
 .ic-brand .section-tag::before{content:"";flex:0 0 17px;width:17px;height:17px;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-6.svg') center/contain no-repeat;}
 .ic-brand .why-us{position:relative;}
-.ic-brand .why-us::before{content:"";pointer-events:none;position:absolute;top:135px;left:26px;width:32px;height:95px;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-3.svg') center/contain no-repeat;opacity:.7;}
 .ic-brand .process{position:relative;overflow:hidden;}
 .ic-brand .process::before{content:"";pointer-events:none;position:absolute;right:-45px;top:12px;width:350px;aspect-ratio:742/321;background:url('https://t0mcq6mtlpjkioym.public.blob.vercel-storage.com/asset-5.svg') center/contain no-repeat;opacity:.18;mask-image:radial-gradient(ellipse at 95% 20%,#000,transparent 75%);z-index:0;}
 .ic-brand .process>.container{position:relative;z-index:1;}

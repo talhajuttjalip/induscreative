@@ -2644,12 +2644,22 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 .card-content{
    width: 80%;
 }
+        @media (max-width: 768px) {
+           .card{
+              display: flex;
+              flex-direction: column;  
+              gap: 30px;
+}
+           .card-content{
+   width: 100%;
+}
+        }
 /* ══════════════════════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════════════════════ */
 
 /* Tablet */
-@media (max-width: 1024px) {
+        @media (max-width: 768px) {
   :root { --section-py: 85px; }
 
   .why-us-grid { grid-template-columns: repeat(2, 1fr); }

@@ -2649,9 +2649,10 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
               display: flex;
               flex-direction: column;  
               gap: 30px;
+              align-items: flex-start;
 }
            .card-content{
-   width: 100%;
+               width: 100%;
 }
         }
 /* ══════════════════════════════════════════════════════════════════════════

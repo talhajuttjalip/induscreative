@@ -2636,7 +2636,14 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
   border-color: var(--c-teal);
   box-shadow: 0 16px 36px rgba(33,44,72,0.08);
 }
-
+.card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.card-content{
+   width: 80%;
+}
 /* ══════════════════════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════════════════════ */

@@ -638,7 +638,7 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
         
         .edge-list { display: flex; flex-direction: column; gap: 1rem; }
         .edge-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem 1.5rem; background: white; border-radius: 14px; border: 1px solid rgba(207,205,201,0.6); }
-        .edge-num { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: rgba(129,168,186,0.3); line-height: 1; min-width: 2rem; }
+        .edge-num { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #d1ab9b; line-height: 1; min-width: 2rem; }
         .edge-text h4 { font-size: 1rem; font-weight: 700; color: var(--c-navy); margin-bottom: 0.3rem; }
         .edge-text p { font-size: 0.9rem; color: var(--text-body); line-height: 1.6; margin: 0; }
         

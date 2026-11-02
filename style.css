@@ -2648,6 +2648,11 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
    display: flex;
    gap: 40px;
 }
+.difference{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
         @media (max-width: 768px) {
            .card{
               display: flex;

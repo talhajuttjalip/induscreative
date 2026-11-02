@@ -2644,6 +2644,10 @@ p  { color: var(--text-body); margin-bottom: 1rem; }
 .card-content{
    width: 80%;
 }
+.service-point{
+   display: flex;
+   gap: 40px;
+}
         @media (max-width: 768px) {
            .card{
               display: flex;
